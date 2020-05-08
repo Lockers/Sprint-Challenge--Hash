@@ -13,14 +13,15 @@ def reconstruct_trip(tickets, length):
 
     for ticket in tickets:
         sources[ticket.source] = ticket.destination
-        print(sources)
+        
 
     route = []
     item = "NONE"
 
     # Add each stop to flight route
+
     for x in range(len(tickets)):
         route.append(sources[item])
         item = sources[item]
-        print(route)
+
     return route
