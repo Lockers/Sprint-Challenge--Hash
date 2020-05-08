@@ -1,10 +1,18 @@
 def has_negatives(a):
 
-    """
-    YOUR CODE HERE
-    """
+    hashDict = {}
+    items = []
 
-    return result
+    for x in a:
+        # Check if absolute value of x is in hashDict
+        # If number has a negative, add to items, else dont add to list (None)
+        
+        if abs(x) in hashDict:
+            items += [abs(x)]
+        else:
+            hashDict[abs(x)] = None
+    print(items)        
+    return items
 
 
 if __name__ == "__main__":
