@@ -3,8 +3,25 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
+    items = dict()
+    
+    result = []
+    for i, numbers in enumerate(arrays):
+        for y in numbers:
+            if items.get(y) != None and i > 0:
+                items_count[y] = items[y] + 1
+            elif items.get(y) is None and i == 0:
+                items_count[y] = 1
+            else:
+                continue
 
-    return
+    for num in items:
+        if items[num] == len(arrays):
+            result.append(num)
+
+    return result
+
+ 
 
 
 if __name__ == "__main__":
