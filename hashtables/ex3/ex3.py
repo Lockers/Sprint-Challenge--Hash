@@ -9,9 +9,9 @@ def intersection(arrays):
     for i, numbers in enumerate(arrays):
         for y in numbers:
             if items.get(y) != None and i > 0:
-                items_count[y] = items[y] + 1
+                items[y] = items[y] + 1
             elif items.get(y) is None and i == 0:
-                items_count[y] = 1
+                items[y] = 1
             else:
                 continue
 
